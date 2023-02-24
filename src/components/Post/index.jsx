@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { Avatar } from "../Avatar";
+import { Comment } from "../Comment";
 import styles from "./styles.module.css";
 
 export function Post() {
@@ -5,7 +8,7 @@ export function Post() {
 		<article className={styles.post}>
 			<header>
 				<div className={styles.author}>
-					<img src="https://github.com/PatricFonseca.png" alt="" />
+					<Avatar src="https://github.com/PatricFonseca.png" />
 					<div className={styles.authorInfo}>
 						<strong>Patric Fonseca</strong>
 						<span>Web Developer</span>
@@ -40,6 +43,12 @@ export function Post() {
 					<button type="submit">Publicar</button>
 				</footer>
 			</form>
+
+			<div className={styles.commentList}>
+				<Comment />
+				<Comment />
+				<Comment />
+			</div>
 		</article>
 	);
 }
